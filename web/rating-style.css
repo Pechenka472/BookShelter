@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Main-font"; 
+    src: url(fonts/Main-font.ttf) format("truetype"); 
+    font-style: normal;
+    font-weight: normal;
+} 
+
+*{
+    font-family: Main-font;
+    color: #FFFFFF; 
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, .4) url(Image/background_Img1.jpg) no-repeat;
+    background-blend-mode: darken;
+    background-size: 100%;
+}
+
+.log-in {
+    position: absolute;
+    top: 6%;
+    left: -3%;
+    width: 600px;
+    height: 90px; 
+}
+.navigation p {
+    margin-top: -10px;
+    position: absolute;
+    right: 20%;
+    font-size: 40px;
+    font-weight: 600;
+}
+.find-lk {
+    margin: 0;
+    width: 3%;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.main-back {
+    position: absolute;
+    left: 85%;
+    top: 7%;
+    transform: translate(-50%,-50%);
+    width: 10%; 
+}
+
+.books {
+    position: absolute;
+    right: 0%;
+    top: 6%;
+    width: 20%;
+}
+
+.books p {
+    font-size: 25px;
+    text-align: end;
+}
+
+.underline-books {
+    position: absolute;
+    right: 4%;
+    top: 12%;
+    background-color: white;
+    width: 230px;
+    height: 3px;
+}
+
+.rate {
+    position: absolute;
+    top: 9%;
+    left: 44%;
+    font-size: 30px;
+}
+
+.rate-body {
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    top: 18%;
+    left: 33%;
+    background: rgba(196, 196, 196, 0.29);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.people {
+    margin-bottom: 50%;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    
+}

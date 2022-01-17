@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="book-style.css">
+    <script src="script.js"></script>
+    <title>Книга</title>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="log-in">
+            <a href="lk.html"><img class="find-lk" src="Image/circ.svg" style="width: 70px">
+            <img class ="find-lk" src="Image/man.svg" style="width: 40px">
+            <p style="position: absolute; right: 14%; top: -2%;">Личный кабинет</p></a>
+        </div>
+        <a href="find.html"><div class="books">
+            <p>Перейти  к списку литературы</p>
+        </div></a>
+        
+        <div class="underline-books"></div>
+        
+        <a href="index.php"><div class="main-back">
+            <p style="font-size: 20px;">Главная</p>    
+        </div></a>
+    </nav>
+    
+    <div class="book"></div>
+    <div class="vertical-line"></div>
+    <div class="book-data">
+        <p style="align-self: center; font-size: 24px;">JavaScript. Подробное руководство</p>
+        <p>Жанр: Программирование на JavaScript</p>
+        <p>Год издания: 2008г.</p>
+        <p>Автор: Дэвид Флэнаган</p>
+        <p>Описание: <br><br>
+Пятое издание бестселлера "JavaScript. Подробное руководство" полностью обновлено. Рассматриваются взаимодействие с протоколом HTTP и применение технологии Ajax, обработка XML-документов, создание графики на стороне клиента с помощью тега "canvas", пространства имен в JavaScript, необходимые для разработки сложных программ, классы, замыкания, Flash и встраивание сценариев JavaScript в Java-приложения.
+Часть I знакомит с основами JavaScript. В части II описывается среда разработки сценариев, предоставляемая веб-броузерами. Многочисленные примеры демонстрируют, как генерировать оглавление HTML-документа, отображать анимированные изображения DHTML, автоматизировать проверку правильности заполнения форм, создавать всплывающие подсказки с использованием Ajax, как применять XPath и XSLT для обработки XML-документов, загруженных с помощью Ajax...</p>
+    </div>
+    
+    
+    <button class="real-button" id="click" onclick="myFunction()"><div class="take-button"><p id="simple" style="align-self: center;">Взять книгу</p></div></button>
+    <script> 
+        var button = document.querySelector('#click').addEventListener('click', onClick);
+        var count = 0;
+        var test = 0;
+        var arr = [9529,5912,0634,5214,1025,8643,2360,1754,7547,9025];
+        function onClick(e) {
+            if (test == arr.length){
+                alert("Вы слишком много раз нажали на кнопку, подождите 1 час");
+                return;
+            }
+            alert("Код для открытия вашей ячейки: " + arr[test]);
+            if(test % 2 == 0)
+                document.getElementById("simple").innerHTML="Вернуть книгу";
+            else
+                document.getElementById("simple").innerHTML="Взять книгу";
+            document.getElementById('click').disabled = true;
+            document.getElementById("simple").innerHTML="Подождите пару секунд..."
+            setTimeout(function() {
+                document.getElementById('click').disabled = false;
+                if(test % 2 == 1)
+                document.getElementById("simple").innerHTML="Вернуть книгу";
+            else
+                document.getElementById("simple").innerHTML="Взять книгу";
+            }, 2300);
+            test = test + 1;
+        }
+    </script>
+    
+    
+</body>
+</html>
